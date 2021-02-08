@@ -144,8 +144,8 @@ a {
 #category > a > #object {
     float: left;
     width: 40%;
-    padding: 2% 1%;
-    margin: 2% 2%;
+    padding: 1% 2% 1% 1%;
+    margin: 1% 1%;
     border-radius: 6px;
     background-color: rgb(20,20,20);
 }
@@ -154,7 +154,7 @@ a {
     top: 0;
 }
 .tile-about {
-    margin: 15px 0px;
+    margin: 5px 0 25px 0;
 }
 .tile-information {
     position: absolute;
@@ -168,6 +168,7 @@ a {
     width: 25px;
     border-radius: 6px;
     vertical-align: middle;
+    margin-bottom: 5px;
 }
 h1 {
     float: left;
