@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>i.am-cursed.tk</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'/>
         <link rel="icon" href="https://avatars.githubusercontent.com/u/39076891?s=460&u=79f1c1f3287d0d39f7f7ab80464ecc385948b478&v=4" type="image/x-icon">
         <link rel="stylesheet" href="styles/newsite.css">
         <script src="https://kit.fontawesome.com/c08a4915fa.js" crossorigin="anonymous"></script>
@@ -173,3 +174,13 @@
     <script>load();</script>
     </body>
 </html>
+
+<!-- Disable Darkreader -->
+<script>
+  const observer = new MutationObserver((mutationsList) => {
+      for(const mutation of mutationsList) {
+          if (mutation.addedNodes[0] && mutation.addedNodes[0].classList?.contains('darkreader')) mutation.addedNodes[0].remove()
+      }
+  });
+  observer.observe(document.head, {childList: true});
+</script>
