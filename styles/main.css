@@ -14,7 +14,6 @@ body, .temporary {
 	height: 100%;
 	background-color: var(--background-main);
 	overflow: hidden;
-	user-select: none;
 }
 .temporary {
 	position: absolute;
@@ -27,6 +26,18 @@ body, .temporary {
 .content-mount {
 	width: auto;
 	height: auto;
+	animation: bottom-up 750ms ease-in-out;
+	user-select: none;
+}
+@keyframes bottom-up {
+    0% {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+    100% {
+        opacity: 1;
+		transform: none;
+    }
 }
 .text-logo {
 	color: var(--color-main);
@@ -42,9 +53,7 @@ body, .temporary {
 	bottom: 14px;
 	left: 5px;
 	color: var(--color-main);
-}
-.connection:hover {
-	color: var(--color-hover);
+
 }
 .connection {
 	position: relative;
@@ -54,7 +63,13 @@ body, .temporary {
 	margin-right: 10px;
 	font-family: var(--font-connections);
 	font-size: 16px;
-	transition: 0.2s all ease-in-out;
+	transition: all 200ms linear;
+}
+.connection:hover {
+	color: var(--color-hover);
+}
+.connection-discord {
+	user-select: text;
 }
 .connection-github {
 	color: inherit;
