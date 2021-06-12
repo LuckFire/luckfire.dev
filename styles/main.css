@@ -65,7 +65,8 @@ body, .temporary {
 	font-size: 16px;
 	transition: all 200ms linear;
 }
-.connection:hover {
+.connection:hover,
+.connection:active {
 	color: var(--color-hover);
 }
 .connection-discord {
