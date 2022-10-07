@@ -20,10 +20,10 @@ const Main = () => {
       </div>
     </div>
     <div id="notices">
-      <Notice type={2} dismissable={false} text="This website is still under construction. It'll be finished.. eventually."></Notice>
+      <Notice type={2} dismissable={true} text="This is still under construction. It'll eventually get finished. If you know what you're doing and are willing to help me understand React better, feel free to give me feedback or contribute [here](https://github.com/LuckFire/luckfire.github.io)."></Notice>
     </div>
   </>);
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Main></Main>);
+root.render(<Main/>);

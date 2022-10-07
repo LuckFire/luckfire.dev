@@ -72,3 +72,12 @@ body, button {
     margin-left: 15px;
     border-radius: 25%;
 }
+
+p {
+    margin: 0;
+}
+
+a { 
+    color: #3898F0;
+    text-decoration: none;
+}
