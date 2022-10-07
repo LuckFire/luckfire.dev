@@ -1,0 +1,33 @@
+.connections {
+    display: flex;
+    gap: 10px;
+}
+
+.connectionContent {
+    display: flex;
+    align-items: center;
+
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    box-shadow: var(--low-shadow);
+    background-color: var(--background-dark);
+    transition: all 250ms ease;
+    cursor: pointer;
+
+    font-weight: 325;
+    font-size: 20px;
+}
+
+.connectionContent:is(:hover, :active) {
+    border-color: var(--accent-default);
+}
+
+.connectionIcon {
+    margin-right: 7px;
+}
+
+.connectionPopout {
+    margin-top: 3px;
+    margin-left: 7px;
+}

@@ -1,0 +1,36 @@
+#notices {
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+
+.noticeContent {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: var(--low-shadow);
+    background-color: var(--background-dark);
+
+    font-weight: 325;
+    font-size: 16px;
+}
+
+.noticePill {
+    width: 4px;
+    height: 20px;
+    margin-right: 7px;
+    border-radius: 4px;
+}
+
+.dismissNotice {
+    margin-left: 5px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}

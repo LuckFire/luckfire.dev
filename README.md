@@ -1,4 +1,4 @@
 # luckfire.github.io
-This is my first time ever attempting to make a site, so please know that *it's gonna be complete dogshit.*
+A scuffed, but simple website built with React. I most likely will expand it in the future, but that's assuming I can actually understand React better.
 
-If you wanna give any feedback on how stuff could be done better, or fix something my idiot self messed up, feel free to.
+Feel free to give me feedback on stuff, such as what I can do better. This is literally my first time every touching React and I'm still a beginner with JS overall.
