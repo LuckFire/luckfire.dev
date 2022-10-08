@@ -6,6 +6,7 @@
 
     --accent-default: #6938F0;
     --accent-dark: #0f0823;
+    --accent-green: #20D05C;
 
     --low-shadow: 0px 2px 6px rgba(0, 0, 0, 0.35);
 }
@@ -59,6 +60,7 @@ body, button {
 }
 
 .infoDescription {
+    margin-bottom: 17px;
     font-weight: 325;
     font-size: 23px;
     inline-size: 326px;
@@ -67,8 +69,8 @@ body, button {
 }
 
 .infoAvatar {
-    width: 136px;
-    height: 136px;
+    width: 150px;
+    height: 150px;
     margin-left: 15px;
     border-radius: 25%;
 }

@@ -6,11 +6,17 @@ class ConnectionButton extends React.Component {
         super(props);
     }
 
+    handleClick() {
+        const { url } = this.props;
+        if (url) window.open(url);
+        return;
+    }
+
     render() {
         const { icon, text, url } = this.props;
         
         return (
-            <button type="button" className="connectionContent" onClick={() => { if (url) window.open(url) }}>
+            <button type="button" className="connectionContent" onClick={() => { this.handleClick() }}>
                 {icon
                 ? <img className="connectionIcon" src={icon}></img>
                 : <></>}

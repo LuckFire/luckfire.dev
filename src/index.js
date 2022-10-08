@@ -15,12 +15,12 @@ const Main = () => {
         <img className="infoAvatar" src="https://avatars.githubusercontent.com/u/39076891?v=4" alt="LuckFire"></img>
       </div>
       <div className="connections">
-        <ConnectionButton icon="./icons/discord.svg" text="LuckFire#4800"></ConnectionButton>
-        <ConnectionButton icon="./icons/github.svg" text="LuckFire" url="https://github.com/LuckFire"></ConnectionButton>
+        <ConnectionButton icon="./icons/github.svg" text="Github Profile" url="https://github.com/LuckFire"></ConnectionButton>
+        <ConnectionButton icon="./icons/discord.svg" text="Support Server" url="https://discord.gg/vYdXbEzqDs"></ConnectionButton>
       </div>
     </div>
     <div id="notices">
-      <Notice type={2} dismissable={false} text="This is still under construction. It'll eventually get finished. If you know what you're doing and are willing to help me understand React better, feel free to give me feedback or contribute [here](https://github.com/LuckFire/luckfire.github.io)."></Notice>
+      <Notice type={3} text="If you know what you're doing and are willing to help me understand React better, feel free to give me feedback or contribute [here](https://github.com/LuckFire/luckfire.github.io)."></Notice>
     </div>
   </>);
 }
