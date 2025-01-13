@@ -71,6 +71,7 @@ svg {
     
     svg {
         color: #6C7184;
+        animation: jiggle 5s infinite linear;
         transition: all 0.2s ease-in-out;
     }
 
@@ -97,5 +98,24 @@ svg {
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes jiggle
+{
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0deg);
     }
 }
