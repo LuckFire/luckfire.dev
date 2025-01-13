@@ -78,6 +78,10 @@ svg {
         color: #CFD6F7;
         filter: drop-shadow(0px 0px 25px rgba(207, 214, 247, 0.5));
     }
+
+    a:hover {
+        cursor: pointer;
+    }
 }
 
 @keyframes jump

@@ -7,6 +7,11 @@ import Signature from './components/Signature';
 import './style.scss';
 
 class App extends Component {
+    private async _newTab(url: string) {
+        const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+        if (newWindow) newWindow.opener = null
+    }
+
     render() {
         return <div class="theme-midnight-sea">
             <div id="foreground">
@@ -21,10 +26,10 @@ class App extends Component {
                     <a href="discord://-/users/399416615742996480">
                         <FontAwesomeIcon icon={faDiscord} size="3x" />
                     </a>
-                    <a href="https://github.com/luckfire">
+                    <a onClick={() => this._newTab('https://github.com/luckfire')}>
                         <FontAwesomeIcon icon={faGithub} size="3x" />
                     </a>
-                    <a href="https://twitter.com/LuckFireDev">
+                    <a onClick={() => this._newTab('https://twitter.com/luckfiredev')}>
                         <FontAwesomeIcon icon={faXTwitter} size="3x" />
                     </a>
                 </div>
