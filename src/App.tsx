@@ -19,7 +19,7 @@ class App extends Component {
                     <Signature />
                 </div>
                 <div class="about-me">
-                    <h1 class="title">Hi, I'm LuckFire!</h1>
+                    <h1 class="title">Hey, I'm LuckFire!</h1>
                     <h2 class="bio">I'm a UI/UX designer and programmer.</h2>
                 </div>
                 <div class="connections">
