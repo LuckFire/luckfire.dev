@@ -1,2 +1,2 @@
-# luckfire.github.io
+# luckfire.dev
 A basic portfolio website.
