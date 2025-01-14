@@ -1,5 +1,4 @@
 import { Component, render } from 'preact';
-import { useState } from 'preact/hooks';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDiscord, faGithub, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import Wave from 'react-wavify';
