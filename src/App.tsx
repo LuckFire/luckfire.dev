@@ -18,7 +18,7 @@ class App extends Component {
 
         document.getElementById('mouse-shadow').style.left = `${clientX - offset}px`;
         document.getElementById('mouse-shadow').style.top = `${clientY - offset}px`;
-        document.getElementById('mouse-shadow').style.opacity = '.15';
+        document.getElementById('mouse-shadow').style.opacity = '.5';
     }
 
     render() {
