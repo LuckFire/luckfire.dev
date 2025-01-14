@@ -7,11 +7,6 @@ import Signature from './components/Signature';
 import './style.scss';
 
 class App extends Component {
-    private async _newTab(url: string) {
-        const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
-        if (newWindow) newWindow.opener = null
-    }
-
     private async _mouseShaodw(event) {
         const { clientX, clientY } = event;
         const offset = (50 / 2);
@@ -32,20 +27,20 @@ class App extends Component {
                     <h2 class="bio">I'm a UI/UX designer and programmer.</h2>
                 </div>
                 <div class="connections">
-                    <a href="discord://-/users/399416615742996480">
+                    <a href="discord://-/users/399416615742996480" draggable={false}>
                         <FontAwesomeIcon icon={faDiscord} size="3x" />
                     </a>
-                    <a onClick={() => this._newTab('https://github.com/luckfire')}>
+                    <a target="_blank" href="https://github.com/luckfire" draggable={false}>
                         <FontAwesomeIcon icon={faGithub} size="3x" />
                     </a>
-                    <a onClick={() => this._newTab('https://twitter.com/luckfiredev')}>
+                    <a target="_blank" href="https://twitter.com/luckfiredev" draggable={false}>
                         <FontAwesomeIcon icon={faXTwitter} size="3x" />
                     </a>
                 </div>
             </div>
             <div id="background">
                 <div id="mouse-shadow"></div>
-                <Wave fill='#131620'
+                <Wave fill='#101423'
                     paused={false}
                     style={{
                         position: 'absolute',
