@@ -1,4 +1,5 @@
 import { Component, render } from 'preact';
+import { useState } from 'preact/hooks';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDiscord, faGithub, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import Wave from 'react-wavify';
@@ -12,8 +13,17 @@ class App extends Component {
         if (newWindow) newWindow.opener = null
     }
 
+    private async _mouseShaodw(event) {
+        const { clientX, clientY } = event;
+        const offset = (50 / 2);
+
+        document.getElementById('mouse-shadow').style.left = `${clientX - offset}px`;
+        document.getElementById('mouse-shadow').style.top = `${clientY - offset}px`;
+        document.getElementById('mouse-shadow').style.opacity = '.15';
+    }
+
     render() {
-        return <div class="theme-midnight-sea">
+        return <div class="theme-midnight-sea" onMouseMove={this._mouseShaodw}>
             <div id="foreground">
                 <div class="signature">
                     <Signature />
@@ -35,6 +45,7 @@ class App extends Component {
                 </div>
             </div>
             <div id="background">
+                <div id="mouse-shadow"></div>
                 <Wave fill='#131620'
                     paused={false}
                     style={{
