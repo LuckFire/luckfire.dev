@@ -12,11 +12,28 @@ class App extends Component {
 
         document.getElementById('mouse-shadow').style.left = `${clientX - offset}px`;
         document.getElementById('mouse-shadow').style.top = `${clientY - offset}px`;
+    }
+
+    private async _mouseLeave(_event: MouseEvent) {
+        document.getElementById('mouse-shadow').style.opacity = '0';
+    }
+
+    private async _mouseEnter(_event: MouseEvent) {
         document.getElementById('mouse-shadow').style.opacity = '.5';
     }
 
+    private async _mouseDown(_event: MouseEvent) {
+        document.getElementById('mouse-shadow').style.opacity = '.9';
+    }
+
     render() {
-        return <div class="theme-midnight-sea" onMouseMove={this._mouseShaodw}>
+        return <div class="theme-midnight-sea"
+            onMouseMove={this._mouseShaodw}
+            onMouseEnter={this._mouseEnter}
+            onMouseLeave={this._mouseLeave}
+            onMouseDown={this._mouseDown}
+            onMouseUp={this._mouseEnter}
+        >
             <Router history={(createHashHistory() as unknown) as CustomHistory}>
                 <Route path="/" component={Home} />
                 <Route default component={NotFound} />
