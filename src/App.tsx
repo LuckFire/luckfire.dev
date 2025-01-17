@@ -1,5 +1,5 @@
 import { Component, render } from 'preact';
-import Router from 'preact-router';
+import Router, { Route } from 'preact-router';
 
 import { Home } from './components/pages/Home';
 import { NotFound } from './components/pages/NotFound';
@@ -17,8 +17,8 @@ class App extends Component {
     render() {
         return <div class="theme-midnight-sea" onMouseMove={this._mouseShaodw}>
             <Router>
-                <Home path="/" />
-                <NotFound default />
+                <Route path="/" component={Home} />
+                <Route default component={NotFound} />
             </Router>
         </div>
     }
