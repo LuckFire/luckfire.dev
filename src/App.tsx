@@ -19,7 +19,7 @@ class App extends Component {
         return <div class="theme-midnight-sea" onMouseMove={this._mouseShaodw}>
             <Router history={(createHashHistory() as unknown) as CustomHistory}>
                 <Route path="/" component={Home} />
-                <Route default component={NotFound} />
+                <Route path="404" component={NotFound} />
             </Router>
         </div>
     }
