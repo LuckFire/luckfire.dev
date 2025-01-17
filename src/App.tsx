@@ -1,5 +1,6 @@
 import { Component, render } from 'preact';
-import Router, { Route } from 'preact-router';
+import Router, { CustomHistory, Route } from 'preact-router';
+import { createHashHistory } from "history";
 
 import { Home } from './components/pages/Home';
 import { NotFound } from './components/pages/NotFound';
@@ -16,7 +17,7 @@ class App extends Component {
 
     render() {
         return <div class="theme-midnight-sea" onMouseMove={this._mouseShaodw}>
-            <Router>
+            <Router history={(createHashHistory() as unknown) as CustomHistory}>
                 <Route path="/" component={Home} />
                 <Route default component={NotFound} />
             </Router>
