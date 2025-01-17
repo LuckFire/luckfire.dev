@@ -2,6 +2,7 @@
 	"private": true,
 	"type": "module",
 	"module": "src/App.tsx",
+	"homepage": "/luckfire.dev/#",
 	"scripts": {
 		"dev": "bunx --bun vite",
 		"build": "bunx --bun vite build",
