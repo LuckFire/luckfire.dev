@@ -1,10 +1,11 @@
 import { Component, render } from 'preact';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDiscord, faGithub, faXTwitter } from '@fortawesome/free-brands-svg-icons';
-import Wave from 'react-wavify';
 
 import Signature from './components/Signature';
-import './style.scss';
+import { Background } from './components/Background';
+import { Foreground } from './components/Foreground';
+import './styling/home.scss';
 
 class App extends Component {
     private async _mouseShaodw(event) {
@@ -18,7 +19,7 @@ class App extends Component {
 
     render() {
         return <div class="theme-midnight-sea" onMouseMove={this._mouseShaodw}>
-            <div id="foreground">
+            <Foreground>
                 <div class="signature">
                     <Signature />
                 </div>
@@ -37,38 +38,8 @@ class App extends Component {
                         <FontAwesomeIcon icon={faXTwitter} size="3x" />
                     </a>
                 </div>
-            </div>
-            <div id="background">
-                <div id="mouse-shadow"></div>
-                <Wave fill='#101423'
-                    paused={false}
-                    style={{
-                        position: 'absolute',
-                        display: 'flex', 
-                        bottom: 100,
-                    }}
-                    options={{
-                        height: 30,
-                        amplitude: 20,
-                        speed: 0.30,
-                        points: 4
-                    }}
-                />
-                <Wave fill='#23273B'
-                    paused={false}
-                    style={{
-                        position: 'absolute',
-                        display: 'flex', 
-                        bottom: -20,
-                    }}
-                    options={{
-                        height: 5,
-                        amplitude: 20,
-                        speed: 0.15,
-                        points: 4
-                    }}
-                />
-            </div>
+            </Foreground>
+            <Background />
         </div>
     }
 }
