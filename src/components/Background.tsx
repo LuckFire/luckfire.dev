@@ -33,6 +33,7 @@ export class Background extends Component {
                     points: 4
                 }}
             />
+            <div id="background-blur"></div>
             {props.children}
         </div>
     }

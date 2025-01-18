@@ -14,18 +14,6 @@ svg {
     fill: #CFD6F7 !important;
 }
 
-#mouse-shadow {
-    position: absolute;
-    transition: opacity 0.25s ease-in-out;
-    width: 50px;
-    height: 50px;
-    box-shadow: 0 0 2rem #2C3354;
-    background-color: #2C3354;
-    border-radius: 100%;
-    pointer-events: none;
-    opacity: 0;
-}
-
 #app {
     width: 100%;
     height: 100%;
@@ -38,6 +26,24 @@ svg {
     background: radial-gradient(circle at 75% -5%, #2C3354 0%, #131624 10%, #090A11 50%);
     background-size: cover;
     background-repeat: no-repeat;
+
+    #background-blur {
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(15px);
+    }
+
+    #mouse-shadow {
+        position: absolute;
+        transition: opacity 0.25s ease-in-out;
+        width: 50px;
+        height: 50px;
+        box-shadow: 0 0 2rem #2C3354;
+        background-color: #2C3354;
+        border-radius: 100%;
+        pointer-events: none;
+        opacity: 0;
+    }
 }
 
 #foreground {
@@ -51,5 +57,5 @@ svg {
     width: 100%;
     height: 100%;
     background-image: url('/noise.png');
-    backdrop-filter: blur(15px);
+    // backdrop-filter: blur(15px);
 }
