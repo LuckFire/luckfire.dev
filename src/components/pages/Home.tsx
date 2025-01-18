@@ -2,10 +2,10 @@ import { Component } from 'preact';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDiscord, faGithub, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 
-import { Signature } from '../../components/Signature';
-import { Foreground } from '../../components/Foreground';
+import { Signature } from '#/components/Signature';
+import { Foreground } from '#/components/Foreground';
 
-import '../../styling/home.scss';
+import '#/styling/home.scss';
 
 export class Home extends Component {
     render() { 

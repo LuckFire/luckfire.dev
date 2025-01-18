@@ -2,6 +2,9 @@
 	"private": true,
 	"type": "module",
 	"module": "src/App.tsx",
+	"imports": {
+		"#/*": "./src/*"
+	},
 	"scripts": {
 		"dev": "bunx --bun vite",
 		"build": "bunx --bun vite build",

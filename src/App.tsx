@@ -2,9 +2,9 @@ import { Component, render } from 'preact';
 import Router, { CustomHistory, Route } from 'preact-router';
 import { createHashHistory } from "history";
 
-import { Home } from './components/pages/Home';
-import { NotFound } from './components/pages/NotFound';
-import { Background } from './components/Background';
+import { Home } from '#/components/pages/Home';
+import { NotFound } from '#/components/pages/NotFound';
+import { Background } from '#/components/Background';
 
 class App extends Component {
     private async _mouseShaodw(event: MouseEvent) {

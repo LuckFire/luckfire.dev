@@ -1,4 +1,4 @@
-import { Attributes, Component, ComponentChildren, Ref } from "preact";
+import { Component } from "preact"; 
 
 export class Signature extends Component {
     render() {
