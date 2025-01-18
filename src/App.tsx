@@ -4,6 +4,7 @@ import { createHashHistory } from "history";
 
 import { Home } from './components/pages/Home';
 import { NotFound } from './components/pages/NotFound';
+import { Background } from './components/Background';
 
 class App extends Component {
     private async _mouseShaodw(event: MouseEvent) {
@@ -38,6 +39,7 @@ class App extends Component {
                 <Route path="/" component={Home} />
                 <Route default component={NotFound} />
             </Router>
+            <Background/>
         </div>
     }
 }

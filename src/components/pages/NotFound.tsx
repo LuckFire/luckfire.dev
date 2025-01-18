@@ -1,6 +1,5 @@
 import { Component } from 'preact';
 
-import { Background } from '../Background';
 import { Foreground } from '../Foreground';
 
 import '../../styling/404.scss';
@@ -20,7 +19,6 @@ export class NotFound extends Component {
                     <h2 class="info">{errors[Math.floor(Math.random() * errors.length)]}</h2>
                 </div>
             </Foreground>
-            <Background />
         </>
     }
 }
