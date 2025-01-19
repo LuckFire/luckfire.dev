@@ -5,7 +5,7 @@ export class Background extends Component {
     render(props: RenderableProps<any>) { 
         return <div id="background">
             <div id="mouse-shadow"></div>
-            <Wave fill='#101423'
+            <Wave fill='var(--bg-lighter)'
                 paused={false}
                 style={{
                     position: 'absolute',
@@ -19,7 +19,7 @@ export class Background extends Component {
                     points: 4
                 }}
             />
-            <Wave fill='#23273B'
+            <Wave fill='var(--bg-lightest)'
                 paused={false}
                 style={{
                     position: 'absolute',
