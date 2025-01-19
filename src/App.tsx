@@ -28,7 +28,9 @@ class App extends Component {
     }
 
     render() {
-        return <div class="theme-midnight-sea"
+        document.documentElement.setAttribute('class', 'theme-midnight-sea');
+
+        return <div
             onMouseMove={this._mouseShaodw}
             onMouseEnter={this._mouseEnter}
             onMouseLeave={this._mouseLeave}
