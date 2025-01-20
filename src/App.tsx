@@ -5,6 +5,7 @@ import { createHashHistory } from "history";
 import { Home } from '#/pages/Home';
 import { NotFound } from '#/pages/NotFound';
 import { Background } from '#/components/Background';
+import { Topbar } from './components/Topbar';
 
 class App extends Component {
     private async _mouseShaodw(event: MouseEvent) {
@@ -39,9 +40,11 @@ class App extends Component {
         >
             <Router history={(createHashHistory() as unknown) as CustomHistory}>
                 <Route path="/" component={Home} />
+                <Route path="/test" component={NotFound} />
                 <Route default component={NotFound} />
             </Router>
             <Background/>
+            {/* <Topbar /> */}
         </div>
     }
 }
