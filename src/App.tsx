@@ -40,7 +40,7 @@ class App extends Component {
             onMouseUp={this._mouseEnter}
         >
             <Router history={(createHashHistory() as unknown) as CustomHistory}>
-                {Pages.map(({ path, component }) => (<Route path={path} component={component} />))}
+                {Pages.map(({ path, component }) => (<Route path={path} component={component || NotFound} />))}
                 <NotFound default />
             </Router>
             <Background/>

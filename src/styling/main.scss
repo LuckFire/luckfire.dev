@@ -59,12 +59,6 @@ svg {
         align-items: center;
         gap: 25px;
 
-        .nav-item {
-            letter-spacing: 0.05em;
-            font-weight: 600;
-            font-size: 16px;
-        }
-
         .nav-divider {
             width: 5px;
             height: 5px;
@@ -124,6 +118,10 @@ svg {
 
 .montserrat-px-20 {
     font-size: 20px;
+}
+
+.montserrat-px-16 {
+    font-size: 16px;
 }
 
 .montserrat-100 {
