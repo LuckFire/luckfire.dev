@@ -15,8 +15,8 @@ export class Home extends Component {
                     <Signature />
                 </div>
                 <div class="about-me">
-                    <h1 class="title">Hey, I'm LuckFire!</h1>
-                    <h2 class="bio">I'm a UI/UX designer and programmer.</h2>
+                    <h2 class="title">Hey, I'm LuckFire!</h2>
+                    <h3 class="bio">I'm a UI/UX designer and programmer.</h3>
                 </div>
                 <div class="connections">
                     <a href="discord://-/users/399416615742996480" draggable={false}>

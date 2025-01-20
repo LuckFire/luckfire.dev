@@ -19,6 +19,27 @@ html, body {
     color: var(--text-base);
 }
 
+h1 {
+    font-size: 125px;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-weight: 900;
+    font-size: 30px;
+    letter-spacing: 0.05em;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.10em;
+    margin-bottom: 15px;
+}
+
 ::selection {
     color: #000;
     background: var(--branding-accent);

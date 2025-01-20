@@ -16,7 +16,7 @@ export class NotFound extends Component {
             <Foreground>
                 <div class="error">
                     <h1 class="status">404</h1>
-                    <h2 class="info">{errors[Math.floor(Math.random() * errors.length)]}</h2>
+                    <h3 class="info">{errors[Math.floor(Math.random() * errors.length)]}</h3>
                 </div>
             </Foreground>
         </>
