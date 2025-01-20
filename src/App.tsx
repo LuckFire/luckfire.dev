@@ -2,10 +2,11 @@ import { Component, render } from 'preact';
 import Router, { CustomHistory, Route } from 'preact-router';
 import { createHashHistory } from "history";
 
-import { Home } from '#/pages/Home';
 import { NotFound } from '#/pages/NotFound';
+
 import { Background } from '#/components/Background';
-import { Topbar } from './components/Topbar';
+import { Topbar } from '#/components/Topbar';
+import { Pages } from '#/lib/constants';
 
 class App extends Component {
     private async _mouseShaodw(event: MouseEvent) {
@@ -39,8 +40,8 @@ class App extends Component {
             onMouseUp={this._mouseEnter}
         >
             <Router history={(createHashHistory() as unknown) as CustomHistory}>
-                <Route path="/" component={Home} />
-                <Route default component={NotFound} />
+                {Pages.map(({ path, component }) => (<Route path={path} component={component} />))}
+                <NotFound default />
             </Router>
             <Background/>
             {/* <Topbar /> */}

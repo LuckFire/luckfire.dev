@@ -2,7 +2,7 @@ import { Component } from 'preact';
 
 import { Foreground } from '#/components/Foreground';
 
-import '#/styling/404.scss';
+import '#/styling/pages/404.scss';
 
 export class NotFound extends Component {
     render() {

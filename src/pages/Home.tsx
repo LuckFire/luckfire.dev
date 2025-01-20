@@ -5,7 +5,7 @@ import { faDiscord, faGithub, faXTwitter } from '@fortawesome/free-brands-svg-ic
 import { Signature } from '#/components/Signature';
 import { Foreground } from '#/components/Foreground';
 
-import '#/styling/home.scss';
+import '#/styling/pages/home.scss';
 
 export class Home extends Component {
     render() { 
