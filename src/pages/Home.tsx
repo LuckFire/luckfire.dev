@@ -9,27 +9,25 @@ import '#/styling/home.scss';
 
 export class Home extends Component {
     render() { 
-        return <>
-            <Foreground>
-                <div class="signature">
-                    <Signature />
-                </div>
-                <div class="about-me">
-                    <h2 class="title">Hey, I'm LuckFire!</h2>
-                    <h3 class="bio">I'm a UI/UX designer and programmer.</h3>
-                </div>
-                <div class="connections">
-                    <a href="discord://-/users/399416615742996480" draggable={false}>
-                        <FontAwesomeIcon icon={faDiscord} size="3x" />
-                    </a>
-                    <a target="_blank" href="https://github.com/luckfire" draggable={false}>
-                        <FontAwesomeIcon icon={faGithub} size="3x" />
-                    </a>
-                    <a target="_blank" href="https://twitter.com/luckfiredev" draggable={false}>
-                        <FontAwesomeIcon icon={faXTwitter} size="3x" />
-                    </a>
-                </div>
-            </Foreground>
-        </>
+        return <Foreground>
+            <div class="signature">
+                <Signature />
+            </div>
+            <div class="about-me">
+                <h2 class="title">Hey, I'm LuckFire!</h2>
+                <h3 class="bio">I'm a UI/UX designer and programmer.</h3>
+            </div>
+            <div class="connections">
+                <a href="discord://-/users/399416615742996480" draggable={false}>
+                    <FontAwesomeIcon icon={faDiscord} size="3x" />
+                </a>
+                <a target="_blank" href="https://github.com/luckfire" draggable={false}>
+                    <FontAwesomeIcon icon={faGithub} size="3x" />
+                </a>
+                <a target="_blank" href="https://twitter.com/luckfiredev" draggable={false}>
+                    <FontAwesomeIcon icon={faXTwitter} size="3x" />
+                </a>
+            </div>
+        </Foreground>
     }
 }
