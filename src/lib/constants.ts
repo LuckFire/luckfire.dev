@@ -10,14 +10,14 @@ export const Pages: Array<{ path: string, location: string, component: Component
         location: 'Home',
         component: Home
     },
-    {
-        path: '/projects',
-        location: 'Projects',
-        component: Projects
-    },
-    {
-        path: '/contact',
-        location: 'Contact',
-        component: Contact
-    },
+    // {
+    //     path: '/projects',
+    //     location: 'Projects',
+    //     component: Projects
+    // },
+    // {
+    //     path: '/contact',
+    //     location: 'Contact',
+    //     component: Contact
+    // },
 ]
