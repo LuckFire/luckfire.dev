@@ -15,8 +15,8 @@ export class Home extends Component {
                 <Signature />
             </div>
             <div class="about-me">
-                <a class={`title ${Fonts.Weights.Montserrat900} ${Fonts.Sizes.Montserrat30px}`}>Hey, I'm LuckFire!</a>
-                <a class={`bio ${Fonts.Weights.Montserrat500} ${Fonts.Sizes.Montserrat20px}`}>I'm a UI/UX designer and programmer.</a>
+                <a class={`${Fonts.Weights.Montserrat900} ${Fonts.Sizes.Montserrat30px}`}>Hey, I'm LuckFire!</a>
+                <a class={`${Fonts.Weights.Montserrat500} ${Fonts.Sizes.Montserrat20px}`}>I'm a UI/UX designer and programmer.</a>
             </div>
             <div class="connections">
                 <a href="discord://-/users/399416615742996480" draggable={false}>
