@@ -1,3 +1,5 @@
+@use './fonts/montserrat.scss';
+
 .theme-midnight-sea {
     --bg-base: #090A11;
     --bg-lighter: #131624;
@@ -26,23 +28,21 @@ a {
 
 h1 {
     font-size: 125px;
-    font-weight: 800;
+    font-weight: 900;
     letter-spacing: 0.05em;
-    margin-bottom: 30px;
+    margin: 30px 0;
 }
 
 h2 {
     font-weight: 900;
     font-size: 30px;
     letter-spacing: 0.05em;
-    margin-bottom: 30px;
 }
 
 h3 {
     font-size: 20px;
     font-weight: 500;
     letter-spacing: 0.10em;
-    margin-bottom: 15px;
 }
 
 ::selection {
