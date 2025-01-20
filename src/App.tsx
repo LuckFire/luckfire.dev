@@ -2,8 +2,8 @@ import { Component, render } from 'preact';
 import Router, { CustomHistory, Route } from 'preact-router';
 import { createHashHistory } from "history";
 
-import { Home } from '#/components/pages/Home';
-import { NotFound } from '#/components/pages/NotFound';
+import { Home } from '#/pages/Home';
+import { NotFound } from '#/pages/NotFound';
 import { Background } from '#/components/Background';
 
 class App extends Component {
