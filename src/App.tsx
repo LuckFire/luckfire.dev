@@ -40,7 +40,6 @@ class App extends Component {
         >
             <Router history={(createHashHistory() as unknown) as CustomHistory}>
                 <Route path="/" component={Home} />
-                <Route path="/test" component={NotFound} />
                 <Route default component={NotFound} />
             </Router>
             <Background/>
