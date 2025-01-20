@@ -18,13 +18,15 @@
     animation: jump .65s;
 
     svg {
-        color: var(--icon-base);
+        opacity: 0.25;
+        color: var(--text-base);
         animation: jiggle 5s infinite linear;
         transition: all 0.2s ease-in-out;
     }
 
     svg:hover {
-        color: var(--icon-hover);
+        opacity: 1;
+        color: var(--text-base);
         filter: drop-shadow(0px 0px .35em rgba(207, 214, 247, 0.5));
     }
 }
