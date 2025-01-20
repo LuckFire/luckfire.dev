@@ -3,7 +3,7 @@ import Wave from 'react-wavify';
 
 export class Background extends Component {
     render(props: RenderableProps<any>) { 
-        return <div id="background">
+        return <div class="background">
             <div id="mouse-shadow"></div>
             <Wave fill='var(--bg-lighter)'
                 paused={false}
@@ -33,7 +33,7 @@ export class Background extends Component {
                     points: 4
                 }}
             />
-            <div id="background-blur"></div>
+            <div class="background-blur"></div>
             {props.children}
         </div>
     }
