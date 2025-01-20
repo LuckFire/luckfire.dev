@@ -5,9 +5,10 @@
 }
 
 .about-me {
-    display: inline;
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    line-height: 0.75;
+    gap: 5px;
     animation: jump .6s;
 }
 

@@ -26,25 +26,6 @@ a {
     text-decoration: inherit
 }
 
-h1 {
-    font-size: 125px;
-    font-weight: 900;
-    letter-spacing: 0.05em;
-    margin: 30px 0;
-}
-
-h2 {
-    font-weight: 900;
-    font-size: 30px;
-    letter-spacing: 0.05em;
-}
-
-h3 {
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 0.10em;
-}
-
 ::selection {
     color: #000;
     background: var(--branding-accent);
@@ -131,6 +112,63 @@ svg {
     width: 100%;
     height: 100%;
     background-image: url('/assets/noise.png');
+}
+
+.montserrat-px-120 {
+    font-size: 120px;
+}
+
+.montserrat-px-30 {
+    font-size: 30px;
+}
+
+.montserrat-px-20 {
+    font-size: 20px;
+}
+
+.montserrat-100 {
+    font-weight: 100;
+    letter-spacing: 0.10em;
+}
+
+.montserrat-200 {
+    font-weight: 200;
+    letter-spacing: 0.10em;
+}
+
+.montserrat-300 {
+    font-weight: 300;
+    letter-spacing: 0.10em;
+}
+
+.montserrat-400 {
+    font-weight: 400;
+    letter-spacing: 0.10em;
+}
+
+.montserrat-500 {
+    font-weight: 500;
+    letter-spacing: 0.10em;
+}
+
+.montserrat-600 {
+    font-weight: 600;
+    letter-spacing: 0.10em;
+}
+
+.montserrat-700 {
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.montserrat-800 {
+    font-weight: 800;
+    letter-spacing: 0.05em;
+}
+
+.montserrat-900 {
+    font-weight: 900;
+    letter-spacing: 0.05em;
 }
 
 @keyframes jump

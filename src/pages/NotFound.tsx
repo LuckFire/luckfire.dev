@@ -1,5 +1,6 @@
 import { Component } from 'preact';
 
+import { Fonts } from '#/lib/constants';
 import { Foreground } from '#/components/Foreground';
 
 import '#/styling/pages/404.scss';
@@ -14,8 +15,8 @@ export class NotFound extends Component {
 
         return <Foreground>
             <div class="error">
-                <h1 class="status">404</h1>
-                <h3 class="info">{errors[Math.floor(Math.random() * errors.length)]}</h3>
+                <a class={`status ${Fonts.Weights.Montserrat900} ${Fonts.Sizes.Montserrat120px}`}>404</a>
+                <a class={`info ${Fonts.Weights.Montserrat500} ${Fonts.Sizes.Montserrat20px}`}>{errors[Math.floor(Math.random() * errors.length)]}</a>
             </div>
         </Foreground>
     }

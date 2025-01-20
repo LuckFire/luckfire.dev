@@ -2,6 +2,7 @@ import { Component } from 'preact';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDiscord, faGithub, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 
+import { Fonts } from '#/lib/constants';
 import { Signature } from '#/components/Signature';
 import { Foreground } from '#/components/Foreground';
 
@@ -14,8 +15,8 @@ export class Home extends Component {
                 <Signature />
             </div>
             <div class="about-me">
-                <h2 class="title">Hey, I'm LuckFire!</h2>
-                <h3 class="bio">I'm a UI/UX designer and programmer.</h3>
+                <a class={`title ${Fonts.Weights.Montserrat900} ${Fonts.Sizes.Montserrat30px}`}>Hey, I'm LuckFire!</a>
+                <a class={`bio ${Fonts.Weights.Montserrat500} ${Fonts.Sizes.Montserrat20px}`}>I'm a UI/UX designer and programmer.</a>
             </div>
             <div class="connections">
                 <a href="discord://-/users/399416615742996480" draggable={false}>
