@@ -1,8 +1,9 @@
 import { ComponentConstructor } from "preact";
 
+import { UnderConstruction } from "#/pages/UnderConstruction";
 import { Home } from "#/pages/Home";
-import { Contact } from "#/pages/Contact";
 import { Projects } from "#/pages/Projects";
+import { Contact } from "#/pages/Contact";
 
 export const Pages: Array<{ path: string, location: string, component?: ComponentConstructor }> = [ 
     {
@@ -13,17 +14,18 @@ export const Pages: Array<{ path: string, location: string, component?: Componen
     {
         path: '/projects',
         location: 'Projects',
-        component: undefined
+        component: UnderConstruction
     },
     {
         path: '/contact',
         location: 'Contact',
-        component: undefined
+        component: UnderConstruction
     },
 ];
 
 const Sizes = {
     Montserrat120px: 'montserrat-px-120',
+    Montserrat80px: 'montserrat-px-80',
     Montserrat30px: 'montserrat-px-30',
     Montserrat20px: 'montserrat-px-20',
     Montserrat16px: 'montserrat-px-16',

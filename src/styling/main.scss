@@ -44,7 +44,7 @@ svg {
     z-index: 1001;
     position: sticky;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     padding: 50px 125px;
     gap: 25px;
     top: 0;
@@ -107,6 +107,10 @@ svg {
 
 .montserrat-px-120 {
     font-size: 120px;
+}
+
+.montserrat-px-80 {
+    font-size: 80px;
 }
 
 .montserrat-px-30 {

@@ -44,7 +44,7 @@ class App extends Component {
                 <NotFound default />
             </Router>
             <Background/>
-            {/* <Topbar /> */}
+            <Topbar />
         </div>
     }
 }

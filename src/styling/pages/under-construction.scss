@@ -1,0 +1,15 @@
+@use '../main';
+
+.under-construction {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    .header {
+        animation: jump .6s;
+    }
+
+    .info {
+        animation: jump .65s;
+    }
+}
