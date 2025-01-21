@@ -81,6 +81,7 @@ svg {
     background: radial-gradient(circle at 75% -5%, var(--bg-lightest) 0%, var(--bg-lighter) 10%, rgba(0, 0, 0, 0) 50%);
     background-size: cover;
     background-repeat: no-repeat;
+    overflow: hidden;
 
     .background-blur {
         width: 100%;
@@ -124,10 +125,11 @@ svg {
     width: 100%;
     height: 100%;
     background-image: url('/assets/noise.png');
+    overflow: hidden;
 }
 
 .divider {
-    width: 100%;
+    width: stretch;
     height: 1px;
     background: linear-gradient(90deg, rgba(207, 214, 247, 0) 0%, #CFD6F7 50%, rgba(207, 214, 247, 0) 100%);
 }

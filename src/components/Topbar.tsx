@@ -5,7 +5,6 @@ export class Topbar extends Component {
     render() {
         return <>
             <div class="topbar">
-                <div class="site-info"></div>
                 <div class="site-nav">
                     {Pages.map(({ path, location }, index) => (<>
                         <div class={`${Fonts.Weights.Montserrat600} ${Fonts.Sizes.Montserrat16px}`}>
