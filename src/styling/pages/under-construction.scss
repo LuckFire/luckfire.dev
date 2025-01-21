@@ -3,16 +3,26 @@
 .under-construction {
     display: flex;
     flex-direction: column;
-    text-align: center;
     gap: 5px;
 
     .header {
-        display: flex;
-        align-items: flex-end;
+        text-align: left;
         animation: jump .6s;
     }
 
     .info {
+        text-align: left;
         animation: jump .65s;
+    }
+}
+
+@media (max-width: 900px) {
+    #app .under-construction {
+        align-items: flex-end;
+        width: 100%;
+
+        .header, .info {
+            margin: 0 30px;
+        }
     }
 }
