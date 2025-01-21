@@ -19,13 +19,14 @@ export const Pages: Array<{ path: string, location: string, component?: Componen
     {
         path: '/contact',
         location: 'Contact',
-        component: UnderConstruction
+        component: Contact
     },
 ];
 
 const Sizes = {
     Montserrat120px: 'montserrat-px-120',
     Montserrat80px: 'montserrat-px-80',
+    Montserrat48px: 'montserrat-px-48',
     Montserrat30px: 'montserrat-px-30',
     Montserrat20px: 'montserrat-px-20',
     Montserrat16px: 'montserrat-px-16',

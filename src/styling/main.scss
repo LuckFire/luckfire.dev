@@ -20,7 +20,13 @@ html, body {
 
 a {
     color: var(--text-base);
-    text-decoration: inherit
+    text-decoration: inherit;
+
+    &.link:hover {
+        color: var(--branding-accent);
+        text-decoration: underline;
+        text-decoration-color: var(--branding-accent);
+    }
 }
 
 ::selection {
@@ -55,14 +61,14 @@ svg {
         flex-direction: row;
         align-items: center;
         gap: 25px;
-
-        .nav-divider {
-            width: 5px;
-            height: 5px;
-            border-radius: 100%;
-            background-color: var(--bg-lightest);
-        }
     }
+}
+
+.nav-divider {
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background-color: var(--bg-lightest);
 }
 
 .background {
@@ -120,12 +126,22 @@ svg {
     background-image: url('/assets/noise.png');
 }
 
+.divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(207, 214, 247, 0) 0%, #CFD6F7 50%, rgba(207, 214, 247, 0) 100%);
+}
+
 .montserrat-px-120 {
     font-size: 120px;
 }
 
 .montserrat-px-80 {
     font-size: 80px;
+}
+
+.montserrat-px-48 {
+    font-size: 48px;
 }
 
 .montserrat-px-30 {
