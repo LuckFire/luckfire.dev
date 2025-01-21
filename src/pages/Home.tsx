@@ -1,10 +1,9 @@
 import { Component } from 'preact';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDiscord, faGithub, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 
 import { Fonts } from '#/lib/constants';
 import { Signature } from '#/components/assets/Signature';
 import { Foreground } from '#/components/Foreground';
+import { Discord, GitHub, XTwitter } from '#/components/assets/Icons';
 
 import '#/styling/pages/home.scss';
 
@@ -20,13 +19,13 @@ export class Home extends Component {
             </div>
             <div class="connections">
                 <a href="discord://-/users/399416615742996480" draggable={false}>
-                    <FontAwesomeIcon icon={faDiscord} size="3x" />
+                    <Discord />
                 </a>
                 <a target="_blank" href="https://github.com/luckfire" draggable={false}>
-                    <FontAwesomeIcon icon={faGithub} size="3x" />
+                    <GitHub />
                 </a>
                 <a target="_blank" href="https://twitter.com/luckfiredev" draggable={false}>
-                    <FontAwesomeIcon icon={faXTwitter} size="3x" />
+                    <XTwitter />
                 </a>
             </div>
         </Foreground>
