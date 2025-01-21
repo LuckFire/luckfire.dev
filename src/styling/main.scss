@@ -67,9 +67,12 @@ svg {
 
 .background {
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at 75% -5%, var(--bg-lightest) 0%, var(--bg-lighter) 10%, var(--bg-base) 50%);
+    background: radial-gradient(circle at 75% -5%, var(--bg-lightest) 0%, var(--bg-lighter) 10%, rgba(0, 0, 0, 0) 50%);
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -89,6 +92,18 @@ svg {
         border-radius: 100%;
         pointer-events: none;
         opacity: 0;
+    }
+
+    .starry-sphere {
+        position: absolute;
+        animation: infinite star-rotate 30s linear;
+        top: -600px;
+        width: 2729px;
+        height: 2729px;
+        background: conic-gradient(from 0.38deg at 50% 50%, rgba(207, 214, 247, 0) 0deg, rgba(207, 214, 247, 0.05) 90deg, #CFD6F7 180deg, rgba(207, 214, 247, 0.05) 270deg, rgba(207, 214, 247, 0) 360deg);
+        -webkit-mask-image: url('/assets/starry-sphere.svg');
+        mask-image: url('/assets/starry-sphere.svg');
+        mask-repeat: no-repeat; 
     }
 }
 
@@ -202,5 +217,12 @@ svg {
     }
     100% {
         transform: rotate(0deg);
+    }
+}
+
+@keyframes star-rotate
+{
+    100% {
+        transform: rotate(360deg);
     }
 }

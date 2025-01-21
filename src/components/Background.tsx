@@ -4,7 +4,8 @@ import Wave from 'react-wavify';
 export class Background extends Component {
     render(props: RenderableProps<any>) { 
         return <div class="background">
-            <div id="mouse-shadow"></div>
+            <div id="mouse-shadow"/>
+            <div class="starry-sphere"/>
             <Wave fill='var(--bg-lighter)'
                 paused={false}
                 style={{
