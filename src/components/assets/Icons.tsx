@@ -1,4 +1,3 @@
-
 import { IconComponent } from "#/lib/extensions/IconComponent";
 
 export const Discord = (props: { scale?: number }) => {
