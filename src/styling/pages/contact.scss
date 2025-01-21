@@ -46,12 +46,16 @@
 
 @media (max-width: 525px) {
     #app .contact-details {
-        .contact-info {
-            align-items: flex-start;
-            flex-direction: column;
+        .contact {
+            align-items: start;
 
-            .nav-divider {
-                display: none;
+            .contact-info {
+                align-items: flex-start;
+                flex-direction: column;
+    
+                .nav-divider {
+                    display: none;
+                }
             }
         }
     }
