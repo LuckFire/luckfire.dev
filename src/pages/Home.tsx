@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDiscord, faGithub, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 
 import { Fonts } from '#/lib/constants';
-import { Signature } from '#/components/Signature';
+import { Signature } from '#/components/assets/Signature';
 import { Foreground } from '#/components/Foreground';
 
 import '#/styling/pages/home.scss';
