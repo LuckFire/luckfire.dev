@@ -15,8 +15,8 @@ export class NotFound extends Component {
 
         return <Foreground>
             <div class="error">
-                <a class={`status ${Fonts.Weights.Montserrat900} ${Fonts.Sizes.Montserrat120px}`}>404</a>
-                <a class={`info ${Fonts.Weights.Montserrat500} ${Fonts.Sizes.Montserrat20px}`}>{errors[Math.floor(Math.random() * errors.length)]}</a>
+                <a class={`status ${Fonts.Weights.Montserrat900} ${Fonts.Sizes.Montserrat32px}`}>404</a>
+                <a class={`info ${Fonts.Weights.Montserrat500} ${Fonts.Sizes.Montserrat16px}`}>{errors[Math.floor(Math.random() * errors.length)]}</a>
             </div>
         </Foreground>
     }

@@ -24,11 +24,8 @@ export const Pages: Array<{ path: string, location: string, component?: Componen
 ];
 
 const Sizes = {
-    Montserrat120px: 'montserrat-px-120',
-    Montserrat80px: 'montserrat-px-80',
-    Montserrat48px: 'montserrat-px-48',
-    Montserrat30px: 'montserrat-px-30',
-    Montserrat20px: 'montserrat-px-20',
+    Montserrat32px: 'montserrat-px-32',
+    Montserrat24px: 'montserrat-px-24',
     Montserrat16px: 'montserrat-px-16',
 };
 
