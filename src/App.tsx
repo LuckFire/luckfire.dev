@@ -2,6 +2,8 @@ import { Component, render } from 'preact';
 import Router, { CustomHistory, Route } from 'preact-router';
 import { createHashHistory } from "history";
 
+import '#/styling/main.scss';
+
 import { NotFound } from '#/pages/NotFound';
 
 import { Background } from '#/components/Background';
