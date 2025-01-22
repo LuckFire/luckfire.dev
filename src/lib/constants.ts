@@ -1,4 +1,4 @@
-import { ComponentConstructor } from "preact";
+import { ComponentConstructor, createContext } from "preact";
 
 import { UnderConstruction } from "#/pages/UnderConstruction";
 import { Home } from "#/pages/Home";
@@ -42,3 +42,11 @@ const Weights = {
 };
 
 export const Fonts = { Sizes, Weights };
+
+const AppContext = createContext<{
+    currentPath: string;
+}>(null);
+
+export const Context = {
+    AppContext
+};
