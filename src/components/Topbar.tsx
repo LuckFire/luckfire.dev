@@ -7,10 +7,9 @@ export class Topbar extends Component {
     }
 
     render() {
-        return <div class="topbar">
-            <Context.AppContext.Consumer>{({ currentPath }) =><>
+        return <Context.AppContext.Consumer>{({ currentPath }) =>
+            <div class="topbar">
                 <div class="site-nav">
-                    {console.log(currentPath)}
                     {Pages.map(({ path, location }, index) => (<>
                         <div
                             class={`nav-item 
@@ -25,7 +24,7 @@ export class Topbar extends Component {
                         {index !== Pages.length - 1 && <div class="nav-divider"></div>}
                     </>))}
                 </div>
-            </>}</Context.AppContext.Consumer>
-        </div>
+            </div>
+        }</Context.AppContext.Consumer>
     }
 }
