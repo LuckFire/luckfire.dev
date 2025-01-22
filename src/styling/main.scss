@@ -81,7 +81,7 @@ svg {
             }
 
             &:hover::after {
-                width: 4px;
+                width: 3px;
             }
 
             &:is(&:hover, &:active)::after {
