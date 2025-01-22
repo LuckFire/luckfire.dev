@@ -1,4 +1,4 @@
-import { IconComponent } from "#/lib/extensions/IconComponent";
+import { IconComponent } from "#/components/extensions/IconComponent";
 
 export const Discord = (props: { scale?: number }) => {
     const paths = [
