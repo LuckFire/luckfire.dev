@@ -9,15 +9,9 @@ import { NotFound } from '#/pages/NotFound';
 
 import '#/styling/main.scss';
 
-class App extends Component<{}, { path: string }> {
+class App extends Component {
     constructor(props: {}) {
         super(props);
-
-        this.state = {
-            path: window.location.hash.replace('#', '')
-        };
-
-        this._routeChanged = this._routeChanged.bind(this);
     }
 
     private async _mouseShaodw(event: MouseEvent) {
@@ -40,10 +34,6 @@ class App extends Component<{}, { path: string }> {
         document.getElementById('mouse-shadow').style.opacity = '.9';
     }
 
-    private async _routeChanged(args: RouterOnChangeArgs) {
-        this.setState({ path: args.path });
-    }
-
     render() {
         document.documentElement.setAttribute('class', 'theme-midnight-sea');
 
@@ -54,11 +44,10 @@ class App extends Component<{}, { path: string }> {
             onMouseDown={this._mouseDown}
             onMouseUp={this._mouseEnter}
         >
-            <Router
-                history={(createHashHistory() as unknown) as CustomHistory}
-                onChange={this._routeChanged}
-            >
-                {Pages.map(({ path, component }) => (<Route path={path} component={component || NotFound} />))}
+            <Router history={(createHashHistory() as unknown) as CustomHistory}>
+                {Pages.map(({ path, component }) => (
+                    <Route path={path} component={component || NotFound} />
+                ))}
                 <NotFound default />
             </Router>
             <Background/>
