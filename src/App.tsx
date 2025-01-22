@@ -8,13 +8,14 @@ import { Pages } from '#/lib/constants';
 import { NotFound } from '#/pages/NotFound';
 
 import '#/styling/main.scss';
+import { TargetedEvent } from 'preact/compat';
 
 class App extends Component {
     constructor(props: {}) {
         super(props);
     }
 
-    private async _mouseShaodw(event: MouseEvent) {
+    private async _mouseShadow(event: TargetedEvent<EventTarget, MouseEvent>) {
         const { clientX, clientY } = event;
         const offset = (50 / 2);
 
@@ -22,15 +23,15 @@ class App extends Component {
         document.getElementById('mouse-shadow').style.top = `${clientY - offset}px`;
     }
 
-    private async _mouseLeave(_event: MouseEvent) {
+    private async _mouseLeave(_event: TargetedEvent<EventTarget, MouseEvent>) {
         document.getElementById('mouse-shadow').style.opacity = '0';
     }
 
-    private async _mouseEnter(_event: MouseEvent) {
+    private async _mouseEnter(_event: TargetedEvent<EventTarget, MouseEvent>) {
         document.getElementById('mouse-shadow').style.opacity = '.5';
     }
 
-    private async _mouseDown(_event: MouseEvent) {
+    private async _mouseDown(_event: TargetedEvent<EventTarget, MouseEvent>) {
         document.getElementById('mouse-shadow').style.opacity = '.9';
     }
 
@@ -38,7 +39,7 @@ class App extends Component {
         document.documentElement.setAttribute('class', 'theme-midnight-sea');
 
         return <div
-            onMouseMove={this._mouseShaodw}
+            onMouseMove={this._mouseShadow}
             onMouseEnter={this._mouseEnter}
             onMouseLeave={this._mouseLeave}
             onMouseDown={this._mouseDown}
