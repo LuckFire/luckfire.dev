@@ -1,5 +1,6 @@
 import { Component, render } from 'preact';
-import Router, { CustomHistory, Route, RouterOnChangeArgs } from 'preact-router';
+import { TargetedEvent } from 'preact/compat';
+import Router, { CustomHistory, Route } from 'preact-router';
 import { createHashHistory } from "history";
 
 import { Background } from '#/components/Background';
@@ -8,7 +9,6 @@ import { Pages } from '#/lib/constants';
 import { NotFound } from '#/pages/NotFound';
 
 import '#/styling/main.scss';
-import { TargetedEvent } from 'preact/compat';
 
 class App extends Component {
     constructor(props: {}) {
