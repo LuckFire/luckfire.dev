@@ -1,16 +1,25 @@
 import { Component, render } from 'preact';
-import Router, { CustomHistory, Route } from 'preact-router';
+import Router, { CustomHistory, Route, RouterOnChangeArgs } from 'preact-router';
 import { createHashHistory } from "history";
-
-import '#/styling/main.scss';
-
-import { NotFound } from '#/pages/NotFound';
 
 import { Background } from '#/components/Background';
 import { Topbar } from '#/components/Topbar';
 import { Pages } from '#/lib/constants';
+import { NotFound } from '#/pages/NotFound';
 
-class App extends Component {
+import '#/styling/main.scss';
+
+class App extends Component<{}, { path: string }> {
+    constructor(props: {}) {
+        super(props);
+
+        this.state = {
+            path: window.location.hash.replace('#', '')
+        };
+
+        this._routeChanged = this._routeChanged.bind(this);
+    }
+
     private async _mouseShaodw(event: MouseEvent) {
         const { clientX, clientY } = event;
         const offset = (50 / 2);
@@ -31,6 +40,10 @@ class App extends Component {
         document.getElementById('mouse-shadow').style.opacity = '.9';
     }
 
+    private async _routeChanged(args: RouterOnChangeArgs) {
+        this.setState({ path: args.path });
+    }
+
     render() {
         document.documentElement.setAttribute('class', 'theme-midnight-sea');
 
@@ -41,7 +54,10 @@ class App extends Component {
             onMouseDown={this._mouseDown}
             onMouseUp={this._mouseEnter}
         >
-            <Router history={(createHashHistory() as unknown) as CustomHistory}>
+            <Router
+                history={(createHashHistory() as unknown) as CustomHistory}
+                onChange={this._routeChanged}
+            >
                 {Pages.map(({ path, component }) => (<Route path={path} component={component || NotFound} />))}
                 <NotFound default />
             </Router>

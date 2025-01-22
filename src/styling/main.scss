@@ -61,6 +61,38 @@ svg {
         flex-direction: row;
         align-items: center;
         gap: 25px;
+
+        .nav-item {
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: font-weight 0.15s linear;
+
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: -10px;
+                height: 4px;
+                border-radius: 6px;
+                transition: all 0.15s linear;
+            }
+
+            &:hover::after {
+                width: 4px;
+            }
+
+            &:is(&:hover, &:active)::after {
+                background-color: var(--text-base);
+            }
+
+            &.nav-active::after {
+                width: 100%;
+                background-color: var(--text-base);
+            }
+        }
     }
 }
 
@@ -107,7 +139,7 @@ svg {
         top: -600px;
         width: 2729px;
         height: 2729px;
-        background: conic-gradient(from 0.38deg at 50% 50%, rgba(207, 214, 247, 0) 0deg, rgba(207, 214, 247, 0.05) 90deg, #CFD6F7 180deg, rgba(207, 214, 247, 0.05) 270deg, rgba(207, 214, 247, 0) 360deg);
+        background: conic-gradient(from 0.38deg at 50% 50%, rgba(44, 51, 84, 0) 0deg, rgba(44, 51, 84, 0.05) 90deg, #2C3354 180deg, rgba(44, 51, 84, 0.05) 270deg, rgba(44, 51, 84, 0.207843) 360deg);
         -webkit-mask-image: url('/assets/starry-sphere.svg');
         mask-image: url('/assets/starry-sphere.svg');
         mask-repeat: no-repeat; 
@@ -178,17 +210,17 @@ svg {
 
 .montserrat-700 {
     font-weight: 700;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.10em;
 }
 
 .montserrat-800 {
     font-weight: 800;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.10em;
 }
 
 .montserrat-900 {
     font-weight: 900;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.10em;
 }
 
 @keyframes jump
