@@ -6,8 +6,10 @@ export class Topbar extends Component<{}, { activeTab: string }> {
     constructor(props: {}) {
         super(props);
 
+        const location = window.location.hash.replace('#', '');
+
         this.state = {
-            activeTab: window.location.hash.replace('#', '')
+            activeTab: location.length > 0 ? location : '/'
         };
 
         this._hashPathUpdate = this._hashPathUpdate.bind(this);
