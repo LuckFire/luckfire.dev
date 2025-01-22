@@ -18,6 +18,7 @@ export class IconComponent extends Component<IconProps> {
         return <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
+            fill-rule="evenodd"
             width={size[0] * (scale || 1)}
             height={size[1] * (scale || 1)}
             viewBox={viewbox}

@@ -3,7 +3,7 @@ import { Component } from 'preact';
 import { Fonts } from '#/lib/constants';
 import { Signature } from '#/components/assets/Signature';
 import { Foreground } from '#/components/Foreground';
-import { Discord, GitHub, XTwitter } from '#/components/assets/Icons';
+import { Discord, GitHub, XTwitter, Roblox } from '#/components/assets/Icons';
 
 import '#/styling/pages/home.scss';
 
@@ -34,6 +34,14 @@ export class Home extends Component {
                     scale: 0.75
                 }
             },
+            {
+                url: 'https://www.roblox.com/users/36347722',
+                newWindow: true,
+                icon: {
+                    asset: Roblox,
+                    scale: 0.75
+                }
+            }
         ];
 
         return <Foreground>

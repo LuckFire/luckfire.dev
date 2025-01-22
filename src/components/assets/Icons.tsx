@@ -23,3 +23,11 @@ export const XTwitter = (props: { scale?: number }) => {
 
     return <IconComponent paths={paths} scale={props.scale} size={[50, 50]} viewbox="0 0 50 50"></IconComponent>
 };
+
+export const Roblox = (props: { scale?: number }) => {
+    const paths = [
+        "M39.4068 50L0 39.4068L10.5085 0L50 10.678L39.4068 50ZM20.9322 17.9661L31.9492 21.0169L28.9831 32.0339L17.9661 28.9831L20.9322 17.9661Z"
+    ];
+
+    return <IconComponent paths={paths} scale={props.scale} size={[50, 50]} viewbox="0 0 50 50"></IconComponent>
+};
