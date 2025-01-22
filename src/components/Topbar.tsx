@@ -9,6 +9,21 @@ export class Topbar extends Component<{}, { activeTab: string }> {
         this.state = {
             activeTab: window.location.hash.replace('#', '')
         };
+
+        this._hashPathUpdate = this._hashPathUpdate.bind(this);
+        this._changeActiveTab = this._changeActiveTab.bind(this);
+    }
+
+    public componentDidMount() {
+        window.addEventListener('hashchange', this._hashPathUpdate);
+    }
+
+    public componentWillUnmount() {
+        window.removeEventListener('hashchange', this._hashPathUpdate);
+    }
+
+    private async _hashPathUpdate(_event: Event) {
+        this.setState({ activeTab: window.location.hash.replace('#', '') });
     }
 
     private async _changeActiveTab(event: TargetedEvent<HTMLElement>, path: string) {
