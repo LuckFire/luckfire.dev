@@ -13,9 +13,10 @@
 html, body {
     margin: 0;
     overflow: hidden;
-    font-family: Montserrat,Arial,Helvetica,sans-serif;
     background-color: var(--bg-base);
     color: var(--text-base);
+    font-family: Montserrat,Arial,Helvetica,sans-serif;
+    font-display: swap;
 }
 
 a {
