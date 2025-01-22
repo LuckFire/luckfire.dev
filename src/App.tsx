@@ -65,10 +65,10 @@ class App extends Component<{}, { currentPath: string; }> {
                     onChange={this._routeChanged}
                 >
                     {Pages.map(({ path, component }, i) => (
-                        <Route key={i+1} path={path} component={component || NotFound} />
+                        <Route path={path} component={component || NotFound} />
                     ))}
                     
-                    <Route default component={NotFound} />
+                    <NotFound default />
                 </Router>
 
                 <Background />
