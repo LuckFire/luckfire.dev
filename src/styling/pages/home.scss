@@ -1,31 +1,51 @@
-.signature {
-    animation: jump .55s;
-    filter: drop-shadow(0px 6px 15px rgba(207, 214, 247, 0.2)) drop-shadow(0px 2px 6px rgba(207, 214, 247, 0.5));
-}
-
-.about-me {
+.home {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    gap: 5px;
-    animation: jump .6s;
+    align-items: center;
+    width: 500px;
+    gap: 25px;
+
+    .signature {
+        animation: jump .55s;
+        filter: drop-shadow(0px 6px 15px rgba(207, 214, 247, 0.2)) drop-shadow(0px 2px 6px rgba(207, 214, 247, 0.5));
+    }
+    
+    .about-me {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+        animation: jump .6s;
+    }
+    
+    .connections {
+        display: flex;
+        justify-content: center ;
+        flex-wrap: wrap;
+        gap: 35px;
+        animation: jump .65s;
+    
+        svg {
+            opacity: 0.25;
+            color: var(--text-base);
+            animation: jiggle 5s infinite linear;
+            transition: all 0.2s ease-in-out;
+        }
+    
+        svg:hover {
+            opacity: 1;
+            color: var(--text-base);
+            filter: drop-shadow(0px 0px .35em rgba(207, 214, 247, 0.5));
+        }
+    }
 }
 
-.connections {
-    display: flex;
-    gap: 35px;
-    animation: jump .65s;
+@media (max-width: 850px) {
+    #app .home {
+        width: 100%;
 
-    svg {
-        opacity: 0.25;
-        color: var(--text-base);
-        animation: jiggle 5s infinite linear;
-        transition: all 0.2s ease-in-out;
-    }
-
-    svg:hover {
-        opacity: 1;
-        color: var(--text-base);
-        filter: drop-shadow(0px 0px .35em rgba(207, 214, 247, 0.5));
+        .about-me, .connections {
+            margin: 0 30px;
+        }
     }
 }
