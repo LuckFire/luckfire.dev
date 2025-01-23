@@ -61,7 +61,6 @@ class App extends Component<{}, { currentPath: string; }> {
                 value={{ currentPath: this.state.currentPath }}
             >
                 <Router
-                    history={(createHashHistory() as unknown) as CustomHistory}
                     onChange={this._routeChanged}
                 >
                     {Pages.map(({ path, component }, i) => (
