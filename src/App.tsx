@@ -41,7 +41,6 @@ class App extends Component<{}, { currentPath: string; }> {
     }
 
     private async _routeChanged(path: string) {
-        console.log(path);
         this.setState({ currentPath: path || '' });
     }
 
