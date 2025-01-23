@@ -1,4 +1,5 @@
 import { ComponentConstructor, createContext } from "preact";
+import { lazy } from "preact-iso";
 
 import { UnderConstruction } from "#/pages/UnderConstruction";
 import { Home } from "#/pages/Home";
