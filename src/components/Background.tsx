@@ -1,11 +1,15 @@
 import { Component, RenderableProps } from 'preact';
 import Wave from 'react-wavify';
 
+import { StarTrails } from '#/components/assets/StarTrails';
+
 export class Background extends Component {
     render(props: RenderableProps<any>) { 
         return <div class="background">
             <div id="mouse-shadow"/>
-            <div class="starry-sphere"/>
+            <div class="star-trails">
+                <StarTrails></StarTrails>
+            </div> 
             <Wave fill='var(--bg-lighter)'
                 paused={false}
                 style={{
