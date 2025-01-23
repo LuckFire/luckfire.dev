@@ -12,7 +12,7 @@ export class StarTrails extends Component {
                 fill="none"
                 stroke="white"
                 stroke-width="0.1"
-                stroke-dasharray={`${i*25/i}, ${i/2}`}
+                stroke-dasharray={`${(i*25/i) || 25/2}, ${i/2}`}
             />);
         }
 
