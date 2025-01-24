@@ -4,7 +4,7 @@ export class StarTrails extends Component {
     public get trails() {
         const trails = [];
 
-        for (let i = 0; i < 25; i++) {
+        for (let i = 1; i < 26; i++) {
             trails.push(<circle
                 r={i*5}
                 cx="50"
@@ -12,7 +12,7 @@ export class StarTrails extends Component {
                 fill="none"
                 stroke="white"
                 stroke-width="0.1"
-                stroke-dasharray={`${(i*25/i) || 25/2}, ${i/2}`}
+                stroke-dasharray={`${(i*25 / i*1.25)}, ${i/2}`}
             />);
         }
 
