@@ -11,8 +11,8 @@ export class StarTrails extends Component {
                 cy="50"
                 fill="none"
                 stroke="white"
-                stroke-width="0.1"
-                stroke-dasharray={`${(i*25 / i*1.25)}, ${i/2}`}
+                stroke-width="0.05"
+                stroke-dasharray={`100, 5`}
             />);
         }
 
