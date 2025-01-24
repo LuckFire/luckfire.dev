@@ -8,9 +8,6 @@ export class Background extends Component<{}> {
         super(props);
     }
 
-    private _resize() {
-        this.setState({ zoom: window.devicePixelRatio });
-    }
     render(props: RenderableProps<any>) { 
         return <div class="background">
             <div class="star-trails">
