@@ -31,12 +31,9 @@ export class Background extends Component<{}, { zoom: number; }> {
             <div class="star-trails">
                 <StarTrails></StarTrails>
             </div> 
-            <div 
-                class="background-blur"
-                style={{
-                    filter: `blur(${Math.max(10, 10 / this.state.zoom)}px)`
-                }}
-            >
+            <div class="background-blur" style={{
+                filter: `blur(${Math.max(10, 10 / this.state.zoom)}px)`
+            }}>
                 <div id="mouse-shadow"/>
                 <Wave fill='var(--bg-lighter)'
                     paused={false}
@@ -44,6 +41,7 @@ export class Background extends Component<{}, { zoom: number; }> {
                         position: 'absolute',
                         display: 'flex', 
                         bottom: 100,
+                        filter: `blur(${Math.max(10, 10 / this.state.zoom)}px)`
                     }}
                     options={{
                         height: 30,
@@ -58,6 +56,7 @@ export class Background extends Component<{}, { zoom: number; }> {
                         position: 'absolute',
                         display: 'flex', 
                         bottom: -20,
+                        filter: `blur(${Math.max(10, 10 / this.state.zoom)}px)`
                     }}
                     options={{
                         height: 5,
