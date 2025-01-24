@@ -14,9 +14,9 @@ export class Topbar extends Component {
                         <div
                             class={`nav-item 
                                 ${currentPath.endsWith(path)
-                                    ? `nav-active ${Fonts.Weights.Montserrat900}`
-                                    : `${Fonts.Weights.Montserrat600}`
-                                } ${Fonts.Sizes.Montserrat16px}`
+                                    ? `nav-active`
+                                    : ``
+                                } ${Fonts.Sizes.Montserrat16px} ${Fonts.Weights.Montserrat800}`
                             }
                         >
                             <a href={path}>{location}</a>

@@ -43,6 +43,10 @@ svg {
     height: 100%;
 }
 
+.noise {
+    background-image: url('/assets/noise.png');
+}
+
 /**
  * TODO: Make this component properly work when the window is resized.
  */
@@ -54,7 +58,6 @@ svg {
     padding: 50px 125px;
     gap: 25px;
     top: 0;
-    width: stretch;
 
     .site-nav {
         display: flex;
@@ -163,7 +166,6 @@ svg {
     gap: 25px;
     width: 100%;
     height: 100%;
-    background-image: url('/assets/noise.png');
     overflow: hidden;
 }
 
