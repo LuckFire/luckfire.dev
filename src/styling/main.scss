@@ -143,12 +143,13 @@ svg {
 
         g {
             will-change: transform;
-            fill: #525a85;
-            transform-origin: center center;
-            animation: infinite star-rotate 30s linear;
+            transform: translate3d(0, 0, 0);
 
             circle {
+                fill: #525a85;
                 mask-image: conic-gradient(from 0.38deg at 50% 50%, rgba(255, 255, 255, 0) 0deg, rgba(255, 255, 255, 0) 90deg, rgba(255, 255, 255, 0.35) 180deg, rgba(255, 255, 255, 0) 270deg, rgba(255, 255, 255, 0) 360deg);
+                transform-origin: center center;
+                animation: infinite star-rotate 30s linear;
             }
         }
     }
