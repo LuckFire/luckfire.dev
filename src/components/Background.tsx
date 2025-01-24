@@ -31,10 +31,10 @@ export class Background extends Component<{}, { zoom: number; }> {
             <div class="star-trails">
                 <StarTrails></StarTrails>
             </div> 
-            <div class="background-blur" style={{
-                filter: `blur(${Math.max(10, 10 / this.state.zoom)}px)`
-            }}>
-                <div id="mouse-shadow"/>
+            <div class="background-blur">
+                <div id="mouse-shadow" style={{
+                    filter: `blur(${Math.max(10, 10 / this.state.zoom)}px)`
+                }} />
                 <Wave fill='var(--bg-lighter)'
                     paused={false}
                     style={{
