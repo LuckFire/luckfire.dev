@@ -33,7 +33,8 @@ export class Background extends Component<{}, { zoom: number; }> {
             </div> 
             <div class="background-blur">
                 <div id="mouse-shadow" style={{
-                    filter: `blur(${Math.max(10, 10 / this.state.zoom)}px)`
+                    filter: `blur(${Math.max(10, 10 / this.state.zoom)}px)`,
+                    transform: `translate3d(0, 0, 0)`
                 }} />
                 <Wave fill='var(--bg-lighter)'
                     paused={false}
@@ -41,7 +42,8 @@ export class Background extends Component<{}, { zoom: number; }> {
                         position: 'absolute',
                         display: 'flex', 
                         bottom: 100,
-                        filter: `blur(${Math.max(10, 10 / this.state.zoom)}px)`
+                        filter: `blur(${Math.max(10, 10 / this.state.zoom)}px)`,
+                        transform: `translate3d(0, 0, 0)`
                     }}
                     options={{
                         height: 30,
@@ -56,7 +58,8 @@ export class Background extends Component<{}, { zoom: number; }> {
                         position: 'absolute',
                         display: 'flex', 
                         bottom: -20,
-                        filter: `blur(${Math.max(10, 10 / this.state.zoom)}px)`
+                        filter: `blur(${Math.max(10, 10 / this.state.zoom)}px)`,
+                        transform: `translate3d(0, 0, 0)`
                     }}
                     options={{
                         height: 5,
