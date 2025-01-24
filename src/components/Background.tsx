@@ -3,47 +3,28 @@ import Wave from 'react-wavify';
 
 import { StarTrails } from '#/components/assets/StarTrails';
 
-export class Background extends Component<{}, { zoom: number; }> {
+export class Background extends Component<{}> {
     constructor(props: {}) {
         super(props);
-
-        this.state = {
-            zoom: window.devicePixelRatio
-        };
-
-        this._resize = this._resize.bind(this);
     }
 
     private _resize() {
         this.setState({ zoom: window.devicePixelRatio });
     }
-
-    public componentDidMount(): void {
-        window.addEventListener('resize', this._resize);
-    }
-
-    public componentWillMount(): void {
-        window.removeEventListener('resize', this._resize);
-    }
-
     render(props: RenderableProps<any>) { 
         return <div class="background">
             <div class="star-trails">
                 <StarTrails></StarTrails>
             </div> 
             <div class="background-blur">
-                <div id="mouse-shadow" style={{
-                    filter: `blur(${Math.max(10, 10 / this.state.zoom)}px)`,
-                    transform: `translate3d(0, 0, 0)`
-                }} />
+                <div id="mouse-shadow" />
                 <Wave fill='var(--bg-lighter)'
                     paused={false}
                     style={{
                         position: 'absolute',
                         display: 'flex', 
                         bottom: 100,
-                        filter: `blur(${Math.max(10, 10 / this.state.zoom)}px)`,
-                        transform: `translate3d(0, 0, 0)`
+                        filter: `drop-shadow(0px -15px 10px var(--bg-lighter))`,
                     }}
                     options={{
                         height: 30,
@@ -58,8 +39,7 @@ export class Background extends Component<{}, { zoom: number; }> {
                         position: 'absolute',
                         display: 'flex', 
                         bottom: -20,
-                        filter: `blur(${Math.max(10, 10 / this.state.zoom)}px)`,
-                        transform: `translate3d(0, 0, 0)`
+                        filter: `drop-shadow(0px -15px 10px var(--bg-lightest))`,
                     }}
                     options={{
                         height: 5,
