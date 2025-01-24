@@ -139,11 +139,13 @@ svg {
         position: absolute;
         width: 100%;
         height: 100%;
+        overflow: hidden;
 
         g {
             fill: #525a85;
 
             circle {
+                will-change: transform;
                 mask-image: conic-gradient(from 0.38deg at 50% 50%, rgba(255, 255, 255, 0) 0deg, rgba(255, 255, 255, 0) 90deg, rgba(255, 255, 255, 0.35) 180deg, rgba(255, 255, 255, 0) 270deg, rgba(255, 255, 255, 0) 360deg);
                 transform-origin: center center;
                 animation: infinite star-rotate 15s linear;
