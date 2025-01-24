@@ -4,7 +4,7 @@ export class StarTrails extends Component {
     public get trails() {
         const trails = [];
 
-        for (let i = 1; i < 26; i++) {
+        for (let i = 1; i < 15; i++) {
             trails.push(<circle
                 r={i*5}
                 cx="50"
