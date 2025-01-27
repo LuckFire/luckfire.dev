@@ -9,13 +9,13 @@ import { NotFound } from '#/pages/NotFound';
 
 import '#/styling/main.scss';
 
-class App extends Component<{}, { currentPath: string; currentZoom: number; }> {
+class App extends Component<{}, { currentPath: string; currentHeight: number; }> {
     constructor(props: {}) {
         super(props);
 
         this.state = {
             currentPath: window.location.pathname,
-            currentZoom: window.devicePixelRatio 
+            currentHeight: window.innerHeight
         };
 
         this._routeChanged = this._routeChanged.bind(this);
@@ -31,7 +31,7 @@ class App extends Component<{}, { currentPath: string; currentZoom: number; }> {
     }
 
     private _resize() {
-        this.setState({ currentZoom: window.devicePixelRatio });
+        this.setState({ currentHeight: window.innerHeight });
     }
 
     private async _mouseShadow(event: TargetedEvent<EventTarget, MouseEvent>) {
@@ -70,7 +70,7 @@ class App extends Component<{}, { currentPath: string; currentZoom: number; }> {
         >
             <Context.App.Provider value={{
                 currentPath: this.state.currentPath,
-                currentZoom: this.state.currentZoom
+                currentHeight: this.state.currentHeight
             }}>
                 <LocationProvider><ErrorBoundary>
                     <Router onRouteChange={this._routeChanged}>

@@ -11,12 +11,12 @@ export class Background extends Component<{}> {
 
     render(props: RenderableProps<any>) { 
         return <div class="background">
-            <Context.App.Consumer>{({ currentZoom }) => (
+            <Context.App.Consumer>{({ currentHeight }) => (
                 <div
                     class="star-trails"
                     style={{
-                        width: `${1920 / currentZoom}px`,
-                        height: `${1080 / currentZoom}px`,
+                        width: `${currentHeight * 1.778}px`,
+                        height: `${currentHeight}px`,
                     }}
                 >
                     <StarTrails></StarTrails>

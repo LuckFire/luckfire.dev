@@ -46,7 +46,7 @@ export const Fonts = { Sizes, Weights };
 
 const App = createContext<{
     currentPath: string;
-    currentZoom: number;
+    currentHeight: number;
 }>(null);
 
 export const Context = {
