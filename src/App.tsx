@@ -1,6 +1,6 @@
 import { Component, render } from 'preact';
 import { TargetedEvent } from 'preact/compat';
-import { LocationProvider, Router, Route, ErrorBoundary, lazy } from 'preact-iso';
+import { LocationProvider, Router, Route, ErrorBoundary } from 'preact-iso';
 
 import { Background } from '#/components/Background';
 import { Topbar } from '#/components/Topbar';
@@ -75,10 +75,10 @@ class App extends Component<{}, { currentPath: string; currentZoom: number; }> {
                 <LocationProvider><ErrorBoundary>
                     <Router onRouteChange={this._routeChanged}>
                         {Pages.map(({ path, component }, i) => (
-                            <Route path={path} component={lazy(async () => (component || NotFound))} />
+                            <Route path={path} component={component} />
                         ))}
                         
-                        <Route default component={lazy(async () => (NotFound))} />
+                        <Route default component={NotFound} />
                     </Router>
                 </ErrorBoundary></LocationProvider>
 

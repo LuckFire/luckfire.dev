@@ -10,17 +10,17 @@ export const Pages: Array<{ path: string, location: string, component?: Componen
     {
         path: '/',
         location: 'Home',
-        component: Home
+        component: lazy(async () => (Home))
     },
     {
         path: '/projects',
         location: 'Projects',
-        component: UnderConstruction
+        component: lazy(async () => (UnderConstruction))
     },
     {
         path: '/contact',
         location: 'Contact',
-        component: Contact
+        component: lazy(async () => (Contact))
     },
 ];
 
