@@ -2,6 +2,7 @@ import { Component, RenderableProps } from 'preact';
 import Wave from 'react-wavify';
 
 import { StarTrails } from '#/components/assets/StarTrails';
+import { Context } from '#/lib/constants';
 
 export class Background extends Component<{}> {
     constructor(props: {}) {
@@ -10,9 +11,17 @@ export class Background extends Component<{}> {
 
     render(props: RenderableProps<any>) { 
         return <div class="background">
-            <div class="star-trails">
-                <StarTrails></StarTrails>
-            </div> 
+            <Context.AppContext.Consumer>{({ currentZoom }) => (
+                <div
+                    class="star-trails"
+                    style={{
+                        width: `${1920 / currentZoom}px`,
+                        height: `${1080 / currentZoom}px`,
+                    }}
+                >
+                    <StarTrails></StarTrails>
+                </div> 
+            )}</Context.AppContext.Consumer>
             <div id="mouse-shadow" />
             <Wave fill='var(--bg-lighter)'
                 paused={false}

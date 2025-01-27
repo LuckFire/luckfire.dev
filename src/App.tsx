@@ -9,15 +9,29 @@ import { NotFound } from '#/pages/NotFound';
 
 import '#/styling/main.scss';
 
-class App extends Component<{}, { currentPath: string; }> {
+class App extends Component<{}, { currentPath: string; currentZoom: number; }> {
     constructor(props: {}) {
         super(props);
 
         this.state = {
-            currentPath: window.location.pathname
+            currentPath: window.location.pathname,
+            currentZoom: window.devicePixelRatio 
         };
 
         this._routeChanged = this._routeChanged.bind(this);
+        this._resize = this._resize.bind(this);
+    }
+
+    public componentDidMount(): void {
+        window.addEventListener('resize', this._resize);
+    }
+
+    public componentWillMount(): void {
+        window.removeEventListener('resize', this._resize);
+    }
+
+    private _resize() {
+        this.setState({ currentZoom: window.devicePixelRatio });
     }
 
     private async _mouseShadow(event: TargetedEvent<EventTarget, MouseEvent>) {
@@ -55,7 +69,8 @@ class App extends Component<{}, { currentPath: string; }> {
             onMouseUp={this._mouseEnter}
         >
             <Context.AppContext.Provider value={{
-                currentPath: this.state.currentPath
+                currentPath: this.state.currentPath,
+                currentZoom: this.state.currentZoom
             }}>
                 <LocationProvider><ErrorBoundary>
                     <Router onRouteChange={this._routeChanged}>
