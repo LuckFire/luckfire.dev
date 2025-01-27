@@ -11,7 +11,7 @@ export class Background extends Component<{}> {
 
     render(props: RenderableProps<any>) { 
         return <div class="background">
-            <Context.AppContext.Consumer>{({ currentZoom }) => (
+            <Context.App.Consumer>{({ currentZoom }) => (
                 <div
                     class="star-trails"
                     style={{
@@ -21,7 +21,7 @@ export class Background extends Component<{}> {
                 >
                     <StarTrails></StarTrails>
                 </div> 
-            )}</Context.AppContext.Consumer>
+            )}</Context.App.Consumer>
             <div id="mouse-shadow" />
             <Wave fill='var(--bg-lighter)'
                 paused={false}

@@ -7,7 +7,7 @@ export class Topbar extends Component {
     }
 
     render() {
-        return <Context.AppContext.Consumer>{({ currentPath }) =>
+        return <Context.App.Consumer>{({ currentPath }) =>
             <div class="topbar">
                 <div class="site-nav">
                     {Pages.map(({ path, location }, index) => (<>
@@ -25,6 +25,6 @@ export class Topbar extends Component {
                     </>))}
                 </div>
             </div>
-        }</Context.AppContext.Consumer>
+        }</Context.App.Consumer>
     }
 }

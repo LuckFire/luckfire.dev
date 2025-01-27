@@ -44,11 +44,11 @@ const Weights = {
 
 export const Fonts = { Sizes, Weights };
 
-const AppContext = createContext<{
+const App = createContext<{
     currentPath: string;
     currentZoom: number;
 }>(null);
 
 export const Context = {
-    AppContext
+    App
 };

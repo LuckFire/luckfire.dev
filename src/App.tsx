@@ -68,7 +68,7 @@ class App extends Component<{}, { currentPath: string; currentZoom: number; }> {
             onMouseDown={this._mouseDown}
             onMouseUp={this._mouseEnter}
         >
-            <Context.AppContext.Provider value={{
+            <Context.App.Provider value={{
                 currentPath: this.state.currentPath,
                 currentZoom: this.state.currentZoom
             }}>
@@ -84,7 +84,7 @@ class App extends Component<{}, { currentPath: string; currentZoom: number; }> {
 
                 <Background />
                 <Topbar />
-            </Context.AppContext.Provider>
+            </Context.App.Provider>
         </div>
     }
 }
