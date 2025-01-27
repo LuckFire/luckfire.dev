@@ -36,7 +36,7 @@ class App extends Component<{}, { currentPath: string; currentZoom: number; }> {
 
     private async _mouseShadow(event: TargetedEvent<EventTarget, MouseEvent>) {
         const { clientX, clientY } = event;
-        const offset = (25 / 2);
+        const offset = (30 / 2);
 
         document.getElementById('mouse-shadow').style.left = `${clientX - offset}px`;
         document.getElementById('mouse-shadow').style.top = `${clientY - offset}px`;
