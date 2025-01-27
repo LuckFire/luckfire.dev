@@ -47,6 +47,7 @@ export const Fonts = { Sizes, Weights };
 const App = createContext<{
     currentPath: string;
     currentHeight: number;
+    aspectRatio: number;
 }>(null);
 
 export const Context = {

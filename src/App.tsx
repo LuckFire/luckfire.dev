@@ -9,13 +9,14 @@ import { NotFound } from '#/pages/NotFound';
 
 import '#/styling/main.scss';
 
-class App extends Component<{}, { currentPath: string; currentHeight: number; }> {
+class App extends Component<{}, { currentPath: string; currentHeight: number; aspectRatio: number; }> {
     constructor(props: {}) {
         super(props);
 
         this.state = {
             currentPath: window.location.pathname,
-            currentHeight: window.innerHeight
+            currentHeight: window.innerHeight,
+            aspectRatio: Math.max(window.innerWidth / window.innerHeight, 1.778)
         };
 
         this._routeChanged = this._routeChanged.bind(this);
@@ -31,7 +32,10 @@ class App extends Component<{}, { currentPath: string; currentHeight: number; }>
     }
 
     private _resize() {
-        this.setState({ currentHeight: window.innerHeight });
+        this.setState({
+            currentHeight: window.innerHeight,
+            aspectRatio: Math.max(window.innerWidth / window.innerHeight, 1.778)
+        });
     }
 
     private async _mouseShadow(event: TargetedEvent<EventTarget, MouseEvent>) {
@@ -70,7 +74,8 @@ class App extends Component<{}, { currentPath: string; currentHeight: number; }>
         >
             <Context.App.Provider value={{
                 currentPath: this.state.currentPath,
-                currentHeight: this.state.currentHeight
+                currentHeight: this.state.currentHeight,
+                aspectRatio: this.state.aspectRatio
             }}>
                 <LocationProvider><ErrorBoundary>
                     <Router onRouteChange={this._routeChanged}>

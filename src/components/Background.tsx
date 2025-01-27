@@ -11,11 +11,11 @@ export class Background extends Component<{}> {
 
     render(props: RenderableProps<any>) { 
         return <div class="background">
-            <Context.App.Consumer>{({ currentHeight }) => (
+            <Context.App.Consumer>{({ currentHeight, aspectRatio }) => (
                 <div
                     class="star-trails"
                     style={{
-                        width: `${currentHeight * 1.778}px`,
+                        width: `${currentHeight * aspectRatio}px`,
                         height: `${currentHeight}px`,
                     }}
                 >
